@@ -1,0 +1,126 @@
+.smarttrak-alarma-lock {
+	overflow: hidden;
+}
+
+.smarttrak-alarma__open {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 20px;
+	border: 1px solid #282d2f;
+	background: #282d2f;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 1.2;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+
+.smarttrak-alarma__open:hover {
+	opacity: 0.92;
+}
+
+.smarttrak-alarma__open--floating {
+	position: fixed;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	z-index: 9998;
+	box-shadow: 0 12px 30px rgba( 0, 0, 0, 0.16 );
+}
+
+.smarttrak-alarma {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+}
+
+.smarttrak-alarma__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba( 0, 0, 0, 0.48 );
+}
+
+.smarttrak-alarma__dialog {
+	position: relative;
+	z-index: 2;
+	width: min( 92vw, 420px );
+	margin: 10vh auto 0;
+	padding: 28px;
+	background: #ffffff;
+	box-shadow: 0 18px 45px rgba( 0, 0, 0, 0.18 );
+}
+
+.smarttrak-alarma__close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	border: 0;
+	background: transparent;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.smarttrak-alarma__title {
+	margin: 0 0 18px;
+	font-size: 22px;
+	line-height: 1.2;
+	color: #282d2f;
+}
+
+.smarttrak-alarma__form {
+	display: grid;
+	gap: 14px;
+}
+
+.smarttrak-alarma__field {
+	display: grid;
+	gap: 6px;
+	font-size: 14px;
+	color: #282d2f;
+}
+
+.smarttrak-alarma__field input {
+	height: 46px;
+	padding: 10px 12px;
+	border: 1px solid #c9d1d5;
+	background: #ffffff;
+	color: #282d2f;
+}
+
+.smarttrak-alarma__submit {
+	height: 46px;
+	border: 1px solid #282d2f;
+	background: #282d2f;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.smarttrak-alarma__message {
+	margin: 0;
+	font-size: 14px;
+}
+
+.smarttrak-alarma__message.is-success {
+	color: #1a7f37;
+}
+
+.smarttrak-alarma__message.is-error {
+	color: #b42318;
+}
+
+@media ( max-width: 767px ) {
+	.smarttrak-alarma__open--floating {
+		right: 14px;
+		left: 14px;
+		bottom: 14px;
+		transform: none;
+	}
+
+	.smarttrak-alarma__dialog {
+		width: calc( 100vw - 28px );
+		margin-top: 8vh;
+		padding: 22px 18px;
+	}
+}
